@@ -18,6 +18,7 @@ async function main() {
     stop:    { ...DEFAULT_PARAMS, effect: 'none' }, // equal to 'on'
     random:  { ...DEFAULT_PARAMS, xy: [Math.round(Math.random()*100)/100, Math.round(Math.random()*100)/100] },
     red:     { ...DEFAULT_PARAMS, xy: [0.69, 0.27] },
+    max:     { ...DEFAULT_PARAMS, bri: 254 },
     weather: { ...DEFAULT_PARAMS, xy: await getXyWithWeather() }
   }
 
