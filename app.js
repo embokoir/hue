@@ -49,7 +49,7 @@ async function turnHue(params = DEFAULT_PARAMS) {
       data: params
   })
     .then(res => console.log('Huuuuuuuuuue!'))
-    .catch(err => console.log(err.response.data))
+    .catch(err => console.log(err))
 }
 
 async function showCommands(commands) {
