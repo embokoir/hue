@@ -4,7 +4,6 @@ dotenv.config()
 
 const IP = process.env.IP
 const ID = process.env.ID
-const LIGHT_NUMBERS = [6, 7, 8] // currently not in use
 const DEFAULT_PARAMS = { on: true, bri: 96, xy: [0.15, 0.05], effect: 'none' }
 
 const weather = require('./weather')
@@ -44,7 +43,7 @@ main()
 
 async function turnHue(params = DEFAULT_PARAMS) {
     axios({
-        url: `http://${IP}/api/${ID}/groups/0/action`,
+        url: `http://${IP}/api/${ID}/lights/1/state`,
         method: 'PUT',
         headers: { "Content-Type" : 'application/json'},
         data: params
